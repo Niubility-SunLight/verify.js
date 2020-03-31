@@ -1,4 +1,4 @@
-    class VerifyInput {
+    export default class VerifyInput {
       constructor(data) {
         this.value = data;
         this.errorMessage = "通过校验"; // 错误信息

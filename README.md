@@ -10,15 +10,25 @@ verify.js 便捷的进行表单输入校验，传统校验通过大量if语句�
 * .isMobile(message) 校验手机号。 length最小长度。message默认：手机格式不正确
 * .isURL(message) 校验url。message默认：链接格式不正确
 * .requireRegexp(reg,message) 自定义校验规则。 reg正则表达式，message错误提示
+
+# 使用
+
+使用前请先import到所在文件
+```
+  import VerifyInput from "./verift.js" //文件所在目录
+```
+
 # Example
 校验输入内容是否为空
 ```
+  import VerifyInput from "./verift.js"
   let verifyInput = new VerifyInput(); //实例化VerifyInput实例
   verifyInput.data().isRequire();
   console.log(verifyInput) //{value: undefined,errorMessage: "数据不能为空",pass: false}
 ```
 校验手机号格式
 ```
+   import VerifyInput from "./verift.js"
    let verifyInput = new VerifyInput();
    verifyInput.data("1352368855").isRequire().isMobile();
    console.log(verifyInput) //{value: "1352368855",errorMessage: "手机格式不正确",pass: false}
